@@ -15,3 +15,7 @@ istream &operator>>(istream &input, Integer &i) {
     i = value;
     return input;
 }
+
+bool operator==(const Integer &lhs, const Integer &rhs) {
+    return lhs.value == rhs.value;
+}

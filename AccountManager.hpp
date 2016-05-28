@@ -46,7 +46,7 @@ public:
      * @param accountId Id of account to be removed.
      * @throw (const char*) if AccountManager::saveToDisk() error.
      */
-    void removeAccount(string accountId) throw(const char*);
+    void removeAccount(Integer accountId) throw(const char*);
 
     /**
      * Check if user name exists.
@@ -72,7 +72,7 @@ public:
 private:
     static AccountManager *instance;
     vector<Account *> accounts;
-    Integer primaryIdAutoInc = 1;
+    Integer primaryIdAutoInc = Integer(1);
 };
 
 

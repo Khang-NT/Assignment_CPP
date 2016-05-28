@@ -66,3 +66,12 @@ void AccountManager::addAccount(string userName, string password, int type) thro
     accounts.push_back(account);
     saveToDisk();
 }
+
+void AccountManager::removeAccount(Integer accountId) throw(const char*) {
+    for (int i = 0; i < accounts.size(); ++i) {
+        if (accounts[i]->getId() == accountId)
+            accounts.erase(accounts.begin() + i);
+        saveToDisk();
+        break;
+    }
+}

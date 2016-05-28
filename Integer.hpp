@@ -34,18 +34,6 @@ public:
         return (operator string()).c_str();
     }
 
-    void operator=(int const &value) {
-        this->value = value;
-    }
-
-    void operator=(long const &value) {
-        this->value = value;
-    }
-
-    bool operator==(Integer a) {
-        return a.value == this->value;
-    }
-
     Integer &operator++() {
         value++;
         return *this;
@@ -64,7 +52,7 @@ ostream &operator<<(ostream &output, const Integer &i);
 
 istream &operator>>(istream &input, Integer &i);
 
-
+bool operator==(const Integer &lhs, const Integer &rhs);
 
 
 #endif //ASSIGNMENT_INTEGER_HPP

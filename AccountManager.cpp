@@ -4,14 +4,20 @@
 
 #include "AccountManager.hpp"
 
-AccountManager *AccountManager::getInstance() {
-    return nullptr;
+AccountManager *AccountManager::instance = 0;
+
+AccountManager &AccountManager::getInstance() throw(const char*) {
+    if (!AccountManager::instance) {
+        instance = new AccountManager();
+        instance->loadFromDisk();
+    }
+    return *instance;
 }
 
-void AccountManager::loadFromDisk() {
+void AccountManager::loadFromDisk() throw(const char*) {
 
 }
 
-void AccountManager::saveToDisk() {
+void AccountManager::saveToDisk() throw(const char*) {
 
 }

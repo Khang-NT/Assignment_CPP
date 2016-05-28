@@ -11,6 +11,7 @@
 
 using namespace std;
 
+
 class Integer {
 public:
     Integer() : Integer(0) {};
@@ -41,14 +42,16 @@ public:
         return a.value == this->value;
     }
 
-    iostream &operator>>(iostream &input) {
-        cin >> this->value;
-        return input;
-    }
 
 protected:
     int value;
 };
+
+ostream &operator<<(ostream &output, const Integer &i);
+
+istream &operator>>(istream &input, const Integer &i);
+
+
 
 
 #endif //ASSIGNMENT_INTEGER_HPP

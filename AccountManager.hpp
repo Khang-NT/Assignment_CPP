@@ -16,7 +16,7 @@ public:
      * @throw (const char*) if AccountManager::loadFromDisk() error.
      * @return Singlestone instance of AccountManager
      */
-    static AccountManager *getInstance() throw(const char*);
+    static AccountManager &getInstance() throw(const char*);
 
     /**
      * Load account list from Accounts.txt file.
@@ -63,6 +63,10 @@ public:
      */
     Account &existAccount(string userName, string password);
 
+
+    ~AccountManager() {
+        delete (instance);
+    }
 private:
     static AccountManager *instance;
     vector<Account> accounts;

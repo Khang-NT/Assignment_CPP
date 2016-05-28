@@ -17,7 +17,7 @@ using namespace std;
 
 class HashSum : public Integer {
 public:
-    static class Builder {
+    class Builder {
     public:
         Builder() : code(51) {};
 

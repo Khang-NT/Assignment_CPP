@@ -25,7 +25,7 @@ public:
         this->passwordHash = *HashSum::Builder().add(newPassword).build();
     }
 
-    const Integer &getId() const {
+    const Integer &getId() {
         return id;
     }
 
@@ -49,8 +49,8 @@ public:
         return type;
     }
 
-    const string getTypeStr() const {
-        switch (type) {
+    const string getTypeStr() {
+        switch (this->type) {
             case TYPE_ADMIN:
                 return "ADMIN";
             case TYPE_MANAGER:
@@ -85,8 +85,9 @@ public:
      * Account type.
      * @param stream input stream
      * @param builder hash code builder
+     * @throw (const char*) throw exception if error when read stream.
      */
-    void deserialize(istream &stream, HashSum::Builder &builder)
+    void deserialize(istream &stream, HashSum::Builder &builder) throw(const char*);
 
     static const int TYPE_ADMIN = 1;
     static const int TYPE_MANAGER = 2;

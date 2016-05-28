@@ -6,9 +6,9 @@
 #define ASSIGNMENT_ACCOUNT_HPP
 
 #include <string>
-#include "HashSum.hpp"
-#include "DateTimeFormat.hpp"
-#include "Configs.hpp"
+#include "../utils/HashSum.hpp"
+#include "../utils/DateTimeFormat.hpp"
+#include "../Configs.hpp"
 
 using namespace std;
 

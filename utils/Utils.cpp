@@ -3,7 +3,7 @@
 //
 
 #include "Utils.hpp"
-#include "AccountManager.hpp"
+#include "../AccountManager.hpp"
 
 namespace Utils {
     void getLine(std::istream &stream, std::string &s) {

@@ -62,6 +62,31 @@ public:
         }
     }
 
+    /**
+     * Serialize to stream and update hash code builder.
+     * @Order:
+     * ID ->
+     * User name ->
+     * Password hash ->
+     * Time created ->
+     * Account type.
+     * @param stream out put stream
+     * @param builder hash code builder
+     */
+    void serialize(ostream &stream, HashSum::Builder &builder);
+
+    /**
+     * Deserialize from input stream and update hash code builder.
+     * @Order:
+     * ID ->
+     * User name ->
+     * Password hash ->
+     * Time created ->
+     * Account type.
+     * @param stream input stream
+     * @param builder hash code builder
+     */
+    void deserialize(istream &stream, HashSum::Builder &builder)
 
     static const int TYPE_ADMIN = 1;
     static const int TYPE_MANAGER = 2;

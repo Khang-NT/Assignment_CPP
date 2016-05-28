@@ -5,11 +5,13 @@
 #include "Integer.hpp"
 
 ostream &operator<<(ostream &output, const Integer &i) {
-    output << i;
+    output << i.value;
     return output;
 }
 
-istream &operator>>(istream &input, const Integer &i) {
-    input >> i;
+istream &operator>>(istream &input, Integer &i) {
+    long value;
+    input >> value;
+    i = value;
     return input;
 }

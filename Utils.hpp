@@ -8,18 +8,19 @@
 
 #include <iosfwd>
 #include <istream>
+#include <iostream>
 
 namespace Utils {
-    void getLine(std::istream &stream, std::string &s) {
-        do {
-            std::getline(stream, s);
-        } while (s.compare("") == 0);
-    }
+    void getLine(std::istream &stream, std::string &s);
 
     template<typename Base, typename T>
     inline bool instanceOf(const T *) {
         return std::is_base_of<Base, T>::value;
     }
+
+    bool yesNo();
+
+    void clearScreen();
 }
 
 

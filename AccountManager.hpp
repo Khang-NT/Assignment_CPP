@@ -16,12 +16,12 @@ public:
      * @throw (const char*) if AccountManager::loadFromDisk() error.
      * @return Singlestone instance of AccountManager
      */
-    static AccountManager &getInstance() throw(const char*);
+    static AccountManager *getInstance() throw(const char*);
 
     /**
      * Load account list from Accounts.txt file.
      * @throw (const char*) Throw exception message if file Accounts.txt doesn't exist
-     * or hash sum mismatch.
+     * or hash sum mismatch or file struct invalid.
      */
     void loadFromDisk() throw(const char*);
 
@@ -39,7 +39,7 @@ public:
      * @throw (const char*) if AccountManager::saveToDisk() error.
      * @see AccountManager::saveToDisk, Account::TYPE_ADMIN, Account::TYPE_MANAGER, Account::TYPE_CUSTOMER;
      */
-    void addAcount(string userName, string password, int type) throw(const char*);
+    void addAccount(string userName, string password, int type) throw(const char*);
 
     /**
      * Remove account which has id matches with accountId.
@@ -67,10 +67,12 @@ public:
     ~AccountManager() {
         delete (instance);
     }
+
+    static const char *FILE_NAME;
 private:
     static AccountManager *instance;
-    vector<Account> accounts;
-    int idPrimary;
+    vector<Account *> accounts;
+    Integer primaryIdAutoInc = 1;
 };
 
 

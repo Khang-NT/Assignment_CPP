@@ -50,7 +50,7 @@ public:
     }
 
     const string getTypeStr() {
-        switch (this->type) {
+        switch ((int) this->type) {
             case TYPE_ADMIN:
                 return "ADMIN";
             case TYPE_MANAGER:
@@ -87,7 +87,7 @@ public:
      * @param builder hash code builder
      * @throw (const char*) throw exception if error when read stream.
      */
-    void deserialize(istream &stream, HashSum::Builder &builder) throw(const char*);
+    static Account *deserialize(istream &stream, HashSum::Builder &builder) throw(const char*);
 
     static const int TYPE_ADMIN = 1;
     static const int TYPE_MANAGER = 2;

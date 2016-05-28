@@ -7,19 +7,24 @@
 #include "Utils.hpp"
 
 void Account::serialize(ostream &stream, HashSum::Builder &builder) {
-    stream << getId();
+    stream << getId() << endl;
     builder.add(id);
-    stream << getUserName();
+    stream << getUserName() << endl;
     builder.add(getUserName());
-    stream << getPasswordHash();
+    stream << getPasswordHash() << endl;
     builder.add(passwordHash);
-    stream << getTimeCreated();
+    stream << getTimeCreated() << endl;
     builder.add(timeCreated);
-    stream << getType();
+    stream << getType() << endl;
     builder.add(type);
 }
 
-void Account::deserialize(istream &stream, HashSum::Builder &builder) throw(const char*) {
+Account *Account::deserialize(istream &stream, HashSum::Builder &builder) throw(const char*) {
+    Integer id;
+    string userName;
+    HashSum passwordHash;
+    Integer timeCreated;
+    Integer type;
     stream >> id;
     if (stream.fail())
         throw "Invalid struct";
@@ -38,6 +43,9 @@ void Account::deserialize(istream &stream, HashSum::Builder &builder) throw(cons
     if (stream.fail())
         throw "Invalid struct";
     builder.add(type);
+    Account *account = new Account(userName, passwordHash, timeCreated, type);;
+    account->setId(id);
+    return account;
 }
 
 

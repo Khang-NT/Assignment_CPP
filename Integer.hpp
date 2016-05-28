@@ -14,11 +14,11 @@ using namespace std;
 
 class Integer {
 public:
-    Integer() : Integer(0) {};
+    Integer() : Integer(0l) {};
 
-    Integer(int value) : value(value) {};
+    Integer(long value) : value(value) {};
 
-    operator int() {
+    operator long() {
         return value;
     }
 
@@ -38,18 +38,31 @@ public:
         this->value = value;
     }
 
+    void operator=(long const &value) {
+        this->value = value;
+    }
+
     bool operator==(Integer a) {
         return a.value == this->value;
     }
 
+    Integer &operator++() {
+        value++;
+        return *this;
+    }
 
-protected:
-    int value;
+    Integer operator++(int) {
+        Integer tmp(*this);
+        value++;
+        return tmp;
+    }
+
+    long value;
 };
 
 ostream &operator<<(ostream &output, const Integer &i);
 
-istream &operator>>(istream &input, const Integer &i);
+istream &operator>>(istream &input, Integer &i);
 
 
 

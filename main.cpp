@@ -1,6 +1,7 @@
 #include <iostream>
 #include "AccountManager.hpp"
 #include "Utils.hpp"
+#include "LoginScreen.hpp"
 
 using namespace std;
 
@@ -16,5 +17,6 @@ int main() {
         accountManager = AccountManager::getInstance();
         accountManager->addAccount("admin", "admin", Account::TYPE_ADMIN);
     }
+    LoginScreen::start();
     return 0;
 }

@@ -5,17 +5,6 @@
 #include <iostream>
 #include "MenuHelper.hpp"
 
-/**
- * Require user choose Yes or No
- * @return true if user choose yes.
- */
-bool yesNo() {
-    char c = ' ';
-    while (c != 'Y' && c != 'y' && c != 'N' && c != 'n') {
-        cin >> c;
-    }
-    return (c == 'y' || c == 'Y');
-}
 
 void clearScreen() {
 #ifdef WINDOWS

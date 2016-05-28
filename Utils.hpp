@@ -18,9 +18,20 @@ namespace Utils {
         return std::is_base_of<Base, T>::value;
     }
 
+    /**
+     * Require user choose Yes or No
+     * @return true if user choose yes.
+     */
     bool yesNo();
 
     void clearScreen();
+
+    /**
+     * Show sign up form and add new account to AccountManager if sign up success.
+     * @param accountType account type to create.
+     * @see Account::TYPE_ADMIN Account::TYPE_MANAGER Account::TYPE_CUSTOMER
+     */
+    void doSignUp(int accountType);
 }
 
 

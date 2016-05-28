@@ -13,8 +13,6 @@ using namespace std;
 
 void clearScreen();
 
-bool yesNo();
-
 class MenuHelper {
 public:
     MenuHelper(string title, string exitCaption) : title(title), exitCaption(exitCaption) {

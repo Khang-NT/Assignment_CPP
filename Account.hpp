@@ -45,7 +45,7 @@ public:
         return DateTimeFormat::format(timeCreated, Configs::dateTimeFormat);
     }
 
-    const Integer &getType() const {
+    const long getType() {
         return type;
     }
 

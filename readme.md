@@ -3,7 +3,7 @@
 * JetBrain Intellij Clion 2016.2 Preview
 * Ubuntu 14.04
 * CMake 3.5
-* Gcc 4.9.3, C++ 11 (depend on [json c++ project](https://github.com/nlohmann/json))
+* C++ 11
 
 ##Features
 ###Sign in with user name and passwordHash

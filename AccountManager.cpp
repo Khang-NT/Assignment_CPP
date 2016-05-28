@@ -75,3 +75,18 @@ void AccountManager::removeAccount(Integer accountId) throw(const char*) {
         break;
     }
 }
+
+Account *AccountManager::existAccount(string userName, string password) {
+    for (Account *account : accounts)
+        if (account->getUserName() == userName &&
+            account->getPasswordHash() == *HashSum::Builder().add(password).build())
+            return account;
+    return 0;
+}
+
+bool AccountManager::existUserName(string userName) {
+    for (Account *account : accounts)
+        if (account->getUserName() == userName)
+            return true;
+    return false;
+}

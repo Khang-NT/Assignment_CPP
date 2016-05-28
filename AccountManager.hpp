@@ -61,8 +61,23 @@ public:
      * @param password password
      * @return (Account&) an account if exist.
      */
-    Account &existAccount(string userName, string password);
+    Account *existAccount(string userName, string password);
 
+    /**
+     * Set logged in account.
+     * @param account pointer to account logged in.
+     */
+    void setCurrentAccount(Account *account) {
+        this->currentAccount = account;
+    }
+
+    /**
+     * Get logged in account.
+     * @return pointer to account logged in.
+     */
+    Account *getCurrentAccount() {
+        return currentAccount;
+    }
 
     ~AccountManager() {
         delete (instance);
@@ -72,7 +87,8 @@ public:
 private:
     static AccountManager *instance;
     vector<Account *> accounts;
-    Integer primaryIdAutoInc = Integer(1);
+    Integer primaryIdAutoInc = 1;
+    Account *currentAccount = 0;
 };
 
 

@@ -10,6 +10,8 @@ set(SOURCE_FILES main.cpp
         utils/DateTimeFormat.hpp utils/DateTimeFormat.cpp
         Configs.hpp
         AccountManager.cpp AccountManager.hpp
-        Utils.hpp Utils.cpp
-        MenuHelper.cpp MenuHelper.hpp LoginScreen.cpp LoginScreen.hpp)
+        utils/Utils.hpp utils/Utils.cpp
+        utils/MenuHelper.cpp utils/MenuHelper.hpp
+        screens/LoginScreen.cpp screens/LoginScreen.hpp
+        screens/AdminScreen.cpp screens/AdminScreen.hpp)
 add_executable(Assignment ${SOURCE_FILES})

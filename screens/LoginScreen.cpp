@@ -3,10 +3,10 @@
 //
 
 #include "LoginScreen.hpp"
-#include "MenuHelper.hpp"
-#include "Utils.hpp"
-#include "Account.hpp"
-#include "AccountManager.hpp"
+#include "../utils/MenuHelper.hpp"
+#include "../utils/Utils.hpp"
+#include "../model/Account.hpp"
+#include "../AccountManager.hpp"
 
 namespace LoginScreen {
     void doSignIn() {

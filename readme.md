@@ -6,8 +6,8 @@
 * C++ 11
 
 ##Features
-###Sign in with user name and passwordHash
-* Sign in, sign up with user name passwordHash
+###Sign in with user name and password
+* Sign in, sign up with user name password
 * Save account info to file (protected by hash algorithm)
 
 ###Account permissions
@@ -15,7 +15,9 @@
   * Create another admin account
   * Open manager account
   * Remove account
+  * Reset password
   * Open manager control panel
+  * Configure how application work
 * Manager:
   * Add, remove, modify (price, number) products
   * Manage orders (update status)

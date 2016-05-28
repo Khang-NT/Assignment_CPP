@@ -2,9 +2,9 @@
 // Created by root on 28/05/2016.
 //
 
-#include "HashSum.hpp"
+#include "../utils/HashSum.hpp"
 #include "Account.hpp"
-#include "Utils.hpp"
+#include "../utils/Utils.hpp"
 
 void Account::serialize(ostream &stream, HashSum::Builder &builder) {
     stream << getId() << endl;

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "AccountManager.hpp"
-#include "Utils.hpp"
-#include "LoginScreen.hpp"
+#include "utils/Utils.hpp"
+#include "screens/LoginScreen.hpp"
 
 using namespace std;
 

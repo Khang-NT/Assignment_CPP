@@ -2,24 +2,26 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/MenuHelper.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/AccountManager.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Utils.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MenuHelper.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/LoginScreen.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/AccountManager.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Account.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Integer.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Utils.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/LoginScreen.hpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Integer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HashSum.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/DateTimeFormat.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Configs.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Account.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/DateTimeFormat.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/screens/LoginScreen.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/screens/AdminScreen.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/screens/LoginScreen.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/screens/AdminScreen.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AccountManager.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Account.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Account.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/DateTimeFormat.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/Utils.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/HashSum.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/MenuHelper.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/Utils.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/Integer.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/MenuHelper.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/DateTimeFormat.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/Integer.hpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AccountManager.hpp" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
